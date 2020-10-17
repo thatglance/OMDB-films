@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OMDB-films</string>
+    <string name="film_title_label">Film title:</string>
+    <string name="film_year_label">Year:</string>
+    <string name="film_type_label">Type:</string>
+    <string name="search_query_hint">Film to search for</string>
+    <string name="search_button_label">Search</string>
+</resources>

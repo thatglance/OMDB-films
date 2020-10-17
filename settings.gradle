@@ -1,0 +1,3 @@
+include ':omdbapi'
+include ':app'
+rootProject.name = "OMDB-films"
