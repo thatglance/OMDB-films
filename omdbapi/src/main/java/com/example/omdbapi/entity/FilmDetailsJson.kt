@@ -19,5 +19,5 @@ data class FilmDetailsJson @JsonCreator constructor(
     @field:JsonProperty("Plot")
     val plot: String?,
     @field:JsonProperty("Response")
-    val isSuccessful: String
+    val isSuccessful: String?
 )
