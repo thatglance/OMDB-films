@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.module.SimpleModule
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
+import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -49,7 +50,8 @@ object OmdbApiFactory {
         .client(okHttpClient)
         .baseUrl("https://www.omdbapi.com/")
         .addConverterFactory(JacksonConverterFactory.create(objectMapper))
-        .addCallAdapterFactory(CoroutineCallAdapterFactory())
+//        .addCallAdapterFactory(CoroutineCallAdapterFactory())
+        .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .build()
 
     val omdbApiService: OmdbApiService = createRetrofit().create(OmdbApiService::class.java)

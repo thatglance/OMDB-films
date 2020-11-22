@@ -48,7 +48,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/film_title_label"
         app:layout_constraintStart_toEndOf="@+id/film_title_label"
         app:layout_constraintTop_toTopOf="@+id/film_title_label"
-        tools:text="Mulan" />
+        tools:text="Mulan"
+        android:ellipsize="end" />
 
     <TextView
         android:id="@+id/film_year"

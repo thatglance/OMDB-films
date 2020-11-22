@@ -5,4 +5,8 @@
     <string name="film_type_label">Type:</string>
     <string name="search_query_hint">Film to search for</string>
     <string name="search_button_label">Search</string>
+    <string name="clear_cache_button_label">Clear cache</string>
+    <string name="nothing_to_show">There\'s nothing to show for now.</string>
+    <string name="error_message">Some error occured.</string>
+    <string name="cache_cleared_message">Cache cleared.</string>
 </resources>

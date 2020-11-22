@@ -2,6 +2,7 @@ package com.example.omdbapi.retrofit
 
 import com.example.omdbapi.entity.FilmDetailsJson
 import com.example.omdbapi.entity.SearchResultJson
+import io.reactivex.rxjava3.core.Observable
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -23,4 +24,9 @@ interface OmdbApiService {
     fun getFilm(
         @Query("i") id: String = ""
     ): Deferred<FilmDetailsJson>
+
+    @GET(".")
+    fun getFilmsRx(
+        @Query("s") searchString: String = ""
+    ): Observable<SearchResultJson>
 }
