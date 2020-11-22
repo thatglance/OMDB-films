@@ -16,7 +16,7 @@ class FilmsAdapter :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmViewHolder {
         return FilmViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.film_view_holder, parent, false)
+                .inflate(R.layout.film_card_view, parent, false)
         )
     }
 
