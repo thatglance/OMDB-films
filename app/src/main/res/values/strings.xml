@@ -9,4 +9,5 @@
     <string name="nothing_to_show">There\'s nothing to show for now.</string>
     <string name="error_message">Some error occured.</string>
     <string name="cache_cleared_message">Cache cleared.</string>
+    <string name="no_result_message">No films found for your query.</string>
 </resources>

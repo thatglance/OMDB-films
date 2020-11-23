@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.omdbfilms.App
 import com.example.omdbfilms.R
+import com.example.omdbfilms.adapter.FilmsAdapter
 import com.example.omdbfilms.viewmodel.SearchViewModel
 import javax.inject.Inject
 
@@ -71,18 +72,17 @@ class SearchFragment : Fragment() {
         filmsRecycler.adapter = filmsAdapter
 
         observeLiveData()
-
-        searchViewModel.getCachedFilms()
     }
 
     private fun observeLiveData() {
         searchViewModel.searchResults.observe(viewLifecycleOwner) { films ->
-            if (films != null && films.isNotEmpty()) {
+            if (films.isNotEmpty()) {
                 emptyListTextView.visibility = View.GONE
                 filmsAdapter.setItems(films)
             } else {
                 emptyListTextView.visibility = View.VISIBLE
                 filmsAdapter.clear()
+                Toast.makeText(context, R.string.no_result_message, Toast.LENGTH_LONG).show()
             }
         }
         searchViewModel.clearCacheResult.observe(viewLifecycleOwner) {

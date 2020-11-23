@@ -52,7 +52,7 @@
             android:id="@+id/films_recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/film_card_view" />
+            tools:listitem="@layout/film_view_holder" />
 
     </androidx.core.widget.NestedScrollView>
 
